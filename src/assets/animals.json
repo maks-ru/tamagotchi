@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Whisky",
+    "species": "dog",
+    "imgUrl": "assets/images/dog.png",
+    "needs": {"food": 100, "fun": 100, "sleep": 100},
+    "isAlive": true
+  },
+  {
+    "id": 2,
+    "name": "Remy",
+    "species": "rat",
+    "imgUrl": "assets/images/ret.png",
+    "needs": {"food": 100, "fun": 100, "sleep": 100},
+    "isAlive": true
+  },
+  {
+    "id": 3,
+    "name": "Paddington",
+    "species": "bear",
+    "imgUrl": "assets/images/bear.png",
+    "needs": {"food": 100, "fun": 100, "sleep": 100},
+    "isAlive": true
+  }
+]

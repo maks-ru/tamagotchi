@@ -1,0 +1,23 @@
+<div *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</div>
+<header class="header">
+  <div class="button-group">
+    <button mat-flat-button class="button" (click)="feed()" [disabled]="!selectedAnimal?.isAlive">Feed</button>
+    <button mat-flat-button (click)="play()" [disabled]="!selectedAnimal?.isAlive">Play</button>
+    <button mat-flat-button (click)="putToSleep()" [disabled]="!selectedAnimal?.isAlive">Sleep</button>
+  </div>
+
+  <div class="info">
+    <p>Live animals: {{animals.length}}</p>
+    <p>Animals died: {{isDead}}</p>
+  </div>
+</header>
+
+<div *ngIf="!loading" class="list">
+  <div *ngFor="let animal of animals" (click)="selectAnimal(animal)" class="list">
+    <app-animal-item [animal]="animal"
+                     [selected]="animal === selectedAnimal"></app-animal-item>
+
+  </div>
+</div>

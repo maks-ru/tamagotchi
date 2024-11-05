@@ -1,0 +1,27 @@
+.selected {
+  border: 2px solid blue;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(87, 200, 245, 0.7);
+  border-radius: 15px;
+}
+
+.need {
+  margin-bottom: 10px;
+}
+
+.progress {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+
+.progress-bar {
+  height: 10px;
+  border-radius: 5px;
+  transition: width 0.3s, background-color 0.3s;
+}

@@ -1,0 +1,18 @@
+<div [class.selected]="selected" class="item"  [@grow]="selected ? 'large' : 'small'">
+  <img [src]="animal.imgUrl" alt="{{animal.name}}" width="100" height="100"/>
+  <h3>{{ animal.name }} ({{ animal.species }})</h3>
+  <div *ngIf="animal.isAlive">
+    <div class="need">
+      <span>Food: {{animal.needs.food}}%</span>
+       <div class="progress-bar" [style.width.%]="animal.needs.food" [style.background]="getProgressColor(animal.needs.food)"></div>
+    </div>
+    <div class="need">
+      <span>Fun {{animal.needs.fun}}%</span>
+      <div class="progress-bar" [style.width.%]="animal.needs.fun" [style.background]="getProgressColor(animal.needs.fun)"></div>
+    </div>
+    <div class="need">
+      <span>Sleep {{animal.needs.sleep}}%</span>
+      <div class="progress-bar" [style.width.%]="animal.needs.sleep" [style.background]="getProgressColor(animal.needs.sleep)"></div>
+    </div>
+  </div>
+</div>
